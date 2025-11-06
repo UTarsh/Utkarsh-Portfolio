@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Utkarsh Jha - Data and AI Engineer specializing in Machine Learning, Data Pipelines, and Full-Stack Development. Transforming raw data into actionable insights.">
+    <meta name="keywords" content="Data Scientist, AI Engineer, Software Engineer, Machine Learning, Python, SQL, Data Pipelines, MLOps, Utkarsh Jha, UTarsh">
+    <meta name="author" content="Utkarsh Jha">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Utkarsh Jha | Data & AI Engineer Portfolio</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">UJ<span>.</span></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="particles" id="particles"></div>
+        
+        <div class="hero-content">
+            <div class="avatar">
+                <img src="me.png" alt="Utkarsh Jha" class="avatar-img">
+            </div>
+            
+            <h1 class="hero-title fade-in">
+                <span class="text-primary">Utkarsh Kumar Jha</span>
+            </h1>
+            
+            <h2 class="hero-subtitle fade-in">
+                Data & AI Engineer
+            </h2>
+            
+                     
+            <div class="hero-buttons fade-in">
+                <button class="btn btn-primary" onclick="scrollToSection('projects')">
+                    View My Work
+                </button>
+                <button class="btn btn-outline" onclick="scrollToSection('contact')">
+                    Get in Touch
+                </button>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About <span class="text-primary">Me</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="rotating-border"></div>
+                    <div class="about-avatar">
+                        <img src="me.png" alt="Utkarsh Jha" class="profile-img">
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        I'm a <span class="text-primary">Data-AI Engineer</span> with a robust background in 
+                        <span class="text-white">Machine Learning</span>, 
+                        <span class="text-white">Data Pipelines</span>, and 
+                        <span class="text-white">Full-Stack Development</span>. 
+                        Just another human teaching machines how to think and work.
+                    </p>
+                    <p class="about-paragraph">
+                        Skilled in Python, SQL, and building intelligent systems that automate complex workflows. 
+                        I specialize in MLOps, AI Agents, and Cognitive Automation, transforming raw data into 
+                        actionable insights through innovative AI solutions. I believe in automating what others overthink.
+                    </p>
+                    <a href="resume.pdf" download class="btn btn-primary">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Work <span class="text-primary">Experience</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="experience-card-wrapper">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Data & AI Engineer</h3>
+                        <span class="experience-company">
+                            <i class="fas fa-building"></i> Gadiel Technologies
+                        </span>
+                    </div>
+                    <div class="experience-meta">
+                        <span class="experience-date">
+                            <i class="fas fa-calendar-alt"></i> January 2025 - Present
+                        </span>
+                        <span class="experience-status">Current Position</span>
+                    </div>
+                    <p class="experience-description">
+                        Implementation of IBM’s Data and AI products at The WAVE Group.
+                    </p>
+                    <div class="experience-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Integration of IBM's Watsonx</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Building and optimizing data pipelines</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Implementing MLOps best practices</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education <span class="text-primary">Background</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="education-grid">
+                <!-- Bachelor's Degree -->
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Bachelor of Technology (B.Tech)</h3>
+                        <h4 class="education-field">Computer Science & Engineering</h4>
+                        <p class="education-institution">
+                            <i class="fas fa-university"></i> Guru Gobind Singh Indraprastha University, Delhi (IN)
+                        </p>
+                        <div class="education-details">
+                            <span class="education-grade">
+                                <i class="fas fa-star"></i> CGPA: 8.4/10
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Senior Secondary -->
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Senior Secondary (XII)</h3>
+                        <h4 class="education-field">Science Stream</h4>
+                        <p class="education-institution">
+                            <i class="fas fa-building"></i> Adarsh Public School, Delhi (IN)
+                        </p>
+                        <div class="education-details">
+                            <span class="education-grade">
+                                <i class="fas fa-star"></i> CGPA: 8.1/10
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary -->
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Secondary (X)</h3>
+                        <h4 class="education-field">CBSE Board</h4>
+                        <p class="education-institution">
+                            <i class="fas fa-building"></i> Adarsh Public School, Delhi (IN)
+                        </p>
+                        <div class="education-details">
+                            <span class="education-grade">
+                                <i class="fas fa-star"></i> CGPA: 9.2/10
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical <span class="text-primary">Skills</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- AI/ML Card -->
+                <div class="skill-card">
+                    <i class="fas fa-brain skill-icon"></i>
+                    <h3 class="skill-category">AI/ML</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Machine Learning</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Deep Learning</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>NLP</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>MLOps</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages Card -->
+                <div class="skill-card">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h3 class="skill-category">Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Python</span>
+                                <span class="skill-percent">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>SQL</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>C++</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>HTML/CSS</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks Card -->
+                <div class="skill-card">
+                    <i class="fas fa-cogs skill-icon"></i>
+                    <h3 class="skill-category">Frameworks</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>TensorFlow</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Scikit-learn</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>LangChain</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Node.js</span>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>FastAPI</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Tools Card -->
+                <div class="skill-card">
+                    <i class="fas fa-database skill-icon"></i>
+                    <h3 class="skill-category">Data Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>IBM Watsonx</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Milvus</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Streamlit</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Data Pipelines</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps Card -->
+                <div class="skill-card">
+                    <i class="fas fa-cloud skill-icon"></i>
+                    <h3 class="skill-category">Cloud & DevOps</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Docker</span>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Git</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>AWS</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>CI/CD</span>
+                                <span class="skill-percent">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="78"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured <span class="text-primary">Projects</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1: AI Meeting Whisperer -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">🧠 AI Meeting Whisperer</h3>
+                        <p class="project-description">
+                            IBM Granite-powered meeting summarizer that automatically extracts key insights, action items, 
+                            and decisions from meeting transcripts using advanced NLP and summarization techniques.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">IBM Granite</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Watsonx</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/UTarsh" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://ujayjumpman.github.io/Utkarsh-Jha/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Real-Time Whiteboard -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">🖌️ Real-Time Collaborative Whiteboard</h3>
+                        <p class="project-description">
+                            Interactive collaborative whiteboard with real-time socket updates, Undo/Redo functionality, 
+                            and multi-user support using Node.js, Socket.io & Canvas API.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag">Socket.io</span>
+                            <span class="tag">Canvas API</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/UTarsh" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://ujayjumpman.github.io/Utkarsh-Jha/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Movie Recommender System -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">🎬 Movie Recommender System</h3>
+                        <p class="project-description">
+                            Content-based movie recommendation engine using TMDB API and cosine similarity. 
+                            Provides personalized movie suggestions based on user preferences and viewing history.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">TMDB API</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/UTarsh" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://ujayjumpman.github.io/Utkarsh-Jha/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's <span class="text-primary">Collaborate</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">
+                    Interested in collaborating on AI/ML projects or discussing innovative data solutions? Let's connect!
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Social Links -->
+                <div class="contact-info">
+                    <div class="social-card">
+                        <h3 class="social-title">Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/UTarsh" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/utkarsh-jha-66093822b/" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="mailto:utkarsh@example.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://ujayjumpman.github.io/Utkarsh-Jha/" target="_blank" class="social-link">
+                                <i class="fas fa-globe"></i>
+                                <span>Portfolio</span>
+                            </a>
+                        </div>
+                        <div class="contact-text">
+                            <p>
+                                Open to freelance opportunities, collaborations, and exciting AI/ML projects. 
+                                Let's build something amazing together and turn data into actionable insights!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2025 Utkarsh Jha
+                </p>
+                <div class="footer-social">
+                    <a href="https://github.com/UTarsh" target="_blank" class="footer-social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/utkarsh-jha-66093822b/" target="_blank" class="footer-social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:utkkumar11@gmail.com.com" class="footer-social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
