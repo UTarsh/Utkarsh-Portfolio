@@ -364,42 +364,6 @@ ul {
     }
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-10px); }
-}
-
-.scroll-mouse {
-    width: 24px;
-    height: 40px;
-    border: 2px solid var(--primary);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    padding-top: 8px;
-}
-
-.scroll-wheel {
-    width: 4px;
-    height: 12px;
-    background: var(--primary);
-    border-radius: 2px;
-    animation: scrollWheel 1.5s infinite;
-}
-
-@keyframes scrollWheel {
-    0%, 100% { opacity: 1; transform: translateY(0); }
-    50% { opacity: 0.5; transform: translateY(8px); }
-}
-
 /* ============================================
    About Section
    ============================================ */
