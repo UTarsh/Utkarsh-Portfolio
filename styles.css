@@ -1549,3 +1549,384 @@ ul {
         font-size: 0.9rem;
     }
 }
+/* Enhanced Responsive Design for Education & Skills */
+@media (max-width: 1200px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+@media (max-width: 1024px) {
+    .education-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet Improvements */
+@media (max-width: 768px) {
+    /* Hero Social Icons */
+    .hero-social {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    /* Education & Skills */
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .edu-card {
+        padding: 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .skill-category {
+        padding: 2rem;
+    }
+    
+    .skill-percent {
+        position: static;
+        display: block;
+        text-align: right;
+        margin-top: 0.5rem;
+    }
+    
+    .skill-bar {
+        width: 100%;
+    }
+    
+    .passion-card {
+        padding: 2rem;
+    }
+    
+    .work-card {
+        padding: 2rem;
+    }
+    
+    .work-title {
+        font-size: 1.75rem;
+    }
+    
+    .work-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .connect-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .connect-card {
+        padding: 2rem;
+    }
+    
+    .connect-quote {
+        padding: 2rem;
+    }
+    
+    .connect-quote blockquote p {
+        font-size: 1.25rem;
+    }
+}
+
+/* Mobile Improvements */
+@media (max-width: 480px) {
+    /* Sections Padding */
+    .about, .education, .passions, .work, .connect {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .avatar-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    /* Education Cards */
+    .edu-card {
+        padding: 1.5rem;
+    }
+    
+    .edu-degree {
+        font-size: 1.25rem;
+    }
+    
+    .edu-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .edu-icon i {
+        font-size: 1.75rem;
+    }
+    
+    .edu-institution {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    /* Skills */
+    .skill-category {
+        padding: 1.5rem;
+    }
+    
+    .skill-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .skill-header h3 {
+        font-size: 1.25rem;
+    }
+    
+    .skill-name {
+        font-size: 0.9rem;
+    }
+    
+    /* Passion Cards */
+    .passion-card {
+        padding: 1.5rem;
+    }
+    
+    .passion-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .passion-title {
+        font-size: 1.5rem;
+    }
+    
+    .passion-description {
+        font-size: 0.95rem;
+    }
+    
+    .stat-num {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.75rem;
+    }
+    
+    /* Work Section */
+    .work-card {
+        padding: 1.5rem;
+    }
+    
+    .work-title {
+        font-size: 1.5rem;
+    }
+    
+    .work-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+    }
+    
+    .highlight-item {
+        flex-direction: column;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .highlight-content h4 {
+        font-size: 1.1rem;
+    }
+    
+    /* Connect Section */
+    .connect-card {
+        padding: 1.5rem;
+    }
+    
+    .connect-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.75rem;
+    }
+    
+    .connect-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .connect-quote {
+        padding: 1.5rem;
+    }
+    
+    .connect-quote blockquote p {
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+    
+    .footer-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .avatar-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .edu-card, .skill-category, .passion-card {
+        padding: 1.25rem;
+    }
+    
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Prevent horizontal overflow */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    max-width: 100%;
+}
+
+/* Ensure images and media are responsive */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Better text wrapping */
+.edu-institution span,
+.work-description,
+.passion-description,
+.about-paragraph {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Fix long words in education section */
+.edu-degree, .edu-major {
+    word-wrap: break-word;
+}
+
+/* Ensure skill names don't overflow */
+.skill-name {
+    word-break: break-word;
+}
+
+/* Navigation fix for z-index */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-menu {
+    z-index: 999;
+}
+
+/* Smooth scrolling offset for fixed navbar */
+html {
+    scroll-padding-top: 100px;
+}
+
+/* Ensure particles don't cause overflow */
+.particles {
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Better mobile spacing */
+@media (max-width: 768px) {
+    section {
+        overflow-x: hidden;
+    }
+    
+    .nav-menu {
+        max-height: calc(100vh - 75px);
+        overflow-y: auto;
+    }
+}
+
+/* Touch-friendly buttons on mobile */
+@media (max-width: 480px) {
+    .social-icon,
+    .passion-link,
+    .btn,
+    .connect-card,
+    .footer-social a {
+        -webkit-tap-highlight-color: rgba(255, 107, 107, 0.3);
+        touch-action: manipulation;
+    }
+    
+    /* Larger touch targets */
+    .nav-link {
+        padding: 1rem;
+        display: block;
+    }
+}
