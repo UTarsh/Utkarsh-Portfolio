@@ -3,34 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Utkarsh Jha - Data and AI Engineer specializing in Machine Learning, Data Pipelines, and Full-Stack Development. Transforming raw data into actionable insights.">
-    <meta name="keywords" content="Data Scientist, AI Engineer, Software Engineer, Machine Learning, Python, SQL, Data Pipelines, MLOps, Utkarsh Jha, UTarsh">
+    <meta name="description" content="Utkarsh Jha - Engineer, Cinephile, Learner, Explorer. Exploring the intersection of technology and art.">
+    <meta name="keywords" content="Utkarsh Jha, Cinema, Literature, Data Engineer, AI Engineer, New Delhi">
     <meta name="author" content="Utkarsh Jha">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <link rel="stylesheet" href="styles.css">
-    <title>Utkarsh Jha | Portfolio</title>
+    <title>Utkarsh Jha</title>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">UJ<span>.</span></div>
+            <div class="logo">ujayjumpman<span class="logo-dot">.</span>online</div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#education" class="nav-link">Education & Skills</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#passions" class="nav-link">Passions</a></li>
+                <li><a href="#connect" class="nav-link">Connect</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -42,104 +41,98 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-bg-overlay"></div>
         <div class="particles" id="particles"></div>
         
         <div class="hero-content">
-            <div class="avatar">
-                <img src="me.png" alt="" class="avatar-img">
+            <div class="avatar-wrapper">
+                <div class="avatar-glow"></div>
+                <img src="me.jpeg" alt="Utkarsh Jha" class="avatar-img">
             </div>
             
-            <h1 class="hero-title fade-in">
-                <span class="text-primary">Utkarsh Kumar Jha</span>
+            <h1 class="hero-title">
+                Utkarsh Kumar Jha
             </h1>
             
-            <h2 class="hero-subtitle fade-in">
-                Tech Enthusiast
-            </h2>
+            <div class="hero-tagline">
+                <span class="tagline-item">Engineer</span>
+                <span class="tagline-divider">•</span>
+                <span class="tagline-item">Cinephile</span>
+                <span class="tagline-divider">•</span>
+                <span class="tagline-item">Learner</span>
+                <span class="tagline-divider">•</span>
+                <span class="tagline-item">Explorer</span>
+            </div>
             
+            <p class="hero-description">
+                Living minimally in a modern world, immersed in technology, captivated by cinema, and drawn to the quiet philosophical questions of everyday existence.
+            </p>
                      
-            <div class="hero-buttons fade-in">
-                <button class="btn btn-primary" onclick="scrollToSection('contact')">
-                    Get in Touch
-                </button>
+            <div class="hero-social">
+                <a href="https://boxd.it/6IfbL" target="_blank" class="social-icon" title="Letterboxd">
+                    <i class="fas fa-film"></i>
+                </a>
+                <a href="https://www.instagram.com/ujayjumpman/" target="_blank" class="social-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/utkarsh-jha-66093822b/" target="_blank" class="social-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://music.apple.com/profile/ujayjumpman" target="_blank" class="social-icon" title="Music">
+                    <i class="fas fa-music"></i>
+                </a>
+                <a href="mailto:utkkumar11@gmail.com" class="social-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <p>Scroll to explore</p>
             </div>
         </div>
-        
-        <!-- Scroll indicator removed -->
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About <span class="text-primary">Me</span></h2>
-                <div class="title-underline"></div>
+                <span class="section-label">Get to Know</span>
+                <h2 class="section-title">About Me</h2>
             </div>
             
             <div class="about-content">
-                <div class="about-image">
-                    <div class="rotating-border"></div>
-                    <div class="about-avatar">
-                        <img src="me.png" alt="" class="profile-img">
-                    </div>
-                </div>
-                
                 <div class="about-text">
                     <p class="about-paragraph">
-                        I'm a <span class="text-primary">Data-AI Engineer</span> with a robust background in 
-                        <span class="text-white">Machine Learning</span>, 
-                        <span class="text-white">Data Pipelines</span>, and 
-                        <span class="text-white">Full-Stack Development</span>. 
-                        Just another human teaching machines how to think and work.
+                        A 24 year old living in New Delhi, India. Committed to quality of thought, of craft, and of life.
+                        By profession, I work with <span class="highlight">Data and AI</span>, building intelligent systems and automating 
+                        complex workflows.
                     </p>
                     <p class="about-paragraph">
-                        Skilled in Python, SQL, and building intelligent systems that automate complex workflows. 
-                        I specialize in MLOps, AI Agents, and Cognitive Automation, transforming raw data into 
-                        actionable insights through innovative AI solutions. I believe in automating what others overthink.
+                        But beyond the lines of code and AI models, I'm deeply passionate about 
+                        <span class="highlight">Cinema</span> (you'll often find me on Letterboxd rating films), 
+                        <span class="highlight">Literature and Poetry</span> (finding solace in verses that capture the ineffable and journaling my daily read on Fable), 
+                        and <span class="highlight">Fitness</span> (Basketball on the court, iron in the gym, both teach discipline and growth).
                     </p>
-                    <a href="Utkarsh Resume.pdf" download class="btn btn-primary">Download Resume</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Work <span class="text-primary">Experience</span></h2>
-                <div class="title-underline"></div>
-            </div>
-            
-            <div class="experience-card-wrapper">
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Data & AI Engineer</h3>
-                        <span class="experience-company">
-                            <i class="fas fa-building"></i> Gadiel Technologies
-                        </span>
-                    </div>
-                    <div class="experience-meta">
-                        <span class="experience-date">
-                            <i class="fas fa-calendar-alt"></i> January 2025 - Present
-                        </span>
-                        <span class="experience-status">Current Position</span>
-                    </div>
-                    <p class="experience-description">
-                        Implementation of IBM’s Data and AI products at The WAVE Group.
+                    <p class="about-paragraph">
+                        I believe in the beautiful intersection of <span class="highlight">Technology and Art</span>. 
+                        Whether it's solving complex data problems, discovering hidden gems in cinema, 
+                        or pushing physical limits, I'm always seeking meaningful experiences and continuous growth.
                     </p>
-                    <div class="experience-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Integration of IBM's Watsonx</span>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Films Watched</div>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Building and optimizing data pipelines</span>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Books Read</div>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Implementing MLOps best practices</span>
+                        <div class="stat-item">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Lines of Code Written</div>
                         </div>
                     </div>
                 </div>
@@ -147,308 +140,267 @@
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- Education & Skills Section -->
     <section id="education" class="education">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Education <span class="text-primary">Background</span></h2>
-                <div class="title-underline"></div>
+                <span class="section-label">Academic Journey</span>
+                <h2 class="section-title">Education Background</h2>
             </div>
             
             <div class="education-grid">
-                <!-- Bachelor's Degree -->
-                <div class="education-card">
-                    <div class="education-icon">
+                <!-- B.Tech Card -->
+                <div class="edu-card">
+                    <div class="edu-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <div class="education-content">
-                        <h3 class="education-degree">Bachelor of Technology (B.Tech)</h3>
-                        <h4 class="education-field">Computer Science & Engineering</h4>
-                        <p class="education-institution">
-                            <i class="fas fa-university"></i> Guru Gobind Singh Indraprastha University, Delhi (IN)
-                        </p>
-                        <div class="education-details">
-                            <span class="education-grade">
-                                <i class="fas fa-star"></i> CGPA: 8.4/10
-                            </span>
-                        </div>
+                    <h3 class="edu-degree">Bachelor of Technology (B.Tech)</h3>
+                    <p class="edu-major">Computer Science & Engineering</p>
+                    <div class="edu-institution">
+                        <i class="fas fa-university"></i>
+                        <span>Guru Gobind Singh Indraprastha University, Delhi (IN)</span>
+                    </div>
+                    <div class="edu-grade">
+                        <i class="fas fa-star"></i>
+                        <span>CGPA: 8.4/10</span>
                     </div>
                 </div>
 
-                <!-- Senior Secondary -->
-                <div class="education-card">
-                    <div class="education-icon">
+                <!-- Senior Secondary Card -->
+                <div class="edu-card">
+                    <div class="edu-icon">
                         <i class="fas fa-school"></i>
                     </div>
-                    <div class="education-content">
-                        <h3 class="education-degree">Senior Secondary (XII)</h3>
-                        <h4 class="education-field">Science Stream</h4>
-                        <p class="education-institution">
-                            <i class="fas fa-building"></i> Adarsh Public School, Delhi (IN)
-                        </p>
-                        <div class="education-details">
-                            <span class="education-grade">
-                                <i class="fas fa-star"></i> CGPA: 8.1/10
-                            </span>
-                        </div>
+                    <h3 class="edu-degree">Senior Secondary (XII)</h3>
+                    <p class="edu-major">Science Stream</p>
+                    <div class="edu-institution">
+                        <i class="fas fa-building"></i>
+                        <span>Adarsh Public School, Delhi (IN)</span>
+                    </div>
+                    <div class="edu-grade">
+                        <i class="fas fa-star"></i>
+                        <span>CGPA: 8.1/10</span>
                     </div>
                 </div>
 
-                <!-- Secondary -->
-                <div class="education-card">
-                    <div class="education-icon">
+                <!-- Secondary Card -->
+                <div class="edu-card">
+                    <div class="edu-icon">
                         <i class="fas fa-book"></i>
                     </div>
-                    <div class="education-content">
-                        <h3 class="education-degree">Secondary (X)</h3>
-                        <h4 class="education-field">CBSE Board</h4>
-                        <p class="education-institution">
-                            <i class="fas fa-building"></i> Adarsh Public School, Delhi (IN)
-                        </p>
-                        <div class="education-details">
-                            <span class="education-grade">
-                                <i class="fas fa-star"></i> CGPA: 9.2/10
-                            </span>
-                        </div>
+                    <h3 class="edu-degree">Secondary (X)</h3>
+                    <p class="edu-major">CBSE Board</p>
+                    <div class="edu-institution">
+                        <i class="fas fa-building"></i>
+                        <span>Adarsh Public School, Delhi (IN)</span>
+                    </div>
+                    <div class="edu-grade">
+                        <i class="fas fa-star"></i>
+                        <span>CGPA: 9.2/10</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Technical <span class="text-primary">Skills</span></h2>
-                <div class="title-underline"></div>
-            </div>
-            
-            <div class="skills-grid">
-                <!-- AI/ML Card -->
-                <div class="skill-card">
-                    <i class="fas fa-brain skill-icon"></i>
-                    <h3 class="skill-category">AI/ML</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Machine Learning</span>
-                                <span class="skill-percent">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Skills</h2>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- AI/ML Card -->
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>AI/ML</h3>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Deep Learning</span>
-                                <span class="skill-percent">85%</span>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Machine Learning</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">Deep Learning</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>NLP</span>
-                                <span class="skill-percent">85%</span>
+                            <div class="skill-item">
+                                <span class="skill-name">NLP</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>MLOps</span>
-                                <span class="skill-percent">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">MLOps</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                    <span class="skill-percent">80%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Languages Card -->
-                <div class="skill-card">
-                    <i class="fas fa-code skill-icon"></i>
-                    <h3 class="skill-category">Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Python</span>
-                                <span class="skill-percent">100%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="100"></div>
-                            </div>
+                    <!-- Languages Card -->
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Languages</h3>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>SQL</span>
-                                <span class="skill-percent">95%</span>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 100%"></div>
+                                    <span class="skill-percent">100%</span>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">SQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                    <span class="skill-percent">95%</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>C++</span>
-                                <span class="skill-percent">90%</span>
+                            <div class="skill-item">
+                                <span class="skill-name">C++</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>HTML/CSS</span>
-                                <span class="skill-percent">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">HTML/CSS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                    <span class="skill-percent">80%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Frameworks Card -->
-                <div class="skill-card">
-                    <i class="fas fa-cogs skill-icon"></i>
-                    <h3 class="skill-category">Frameworks</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>TensorFlow</span>
-                                <span class="skill-percent">95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
+                    <!-- Frameworks Card -->
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>Frameworks</h3>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Scikit-learn</span>
-                                <span class="skill-percent">90%</span>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">TensorFlow</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">Scikit-learn</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>LangChain</span>
-                                <span class="skill-percent">85%</span>
+                            <div class="skill-item">
+                                <span class="skill-name">LangChain</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">Node.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 82%"></div>
+                                    <span class="skill-percent">82%</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Node.js</span>
-                                <span class="skill-percent">82%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="82"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>FastAPI</span>
-                                <span class="skill-percent">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">FastAPI</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                    <span class="skill-percent">80%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Data Tools Card -->
-                <div class="skill-card">
-                    <i class="fas fa-database skill-icon"></i>
-                    <h3 class="skill-category">Data Tools</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>IBM Watsonx</span>
-                                <span class="skill-percent">95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
+                    <!-- Data Tools Card -->
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fas fa-database"></i>
+                            <h3>Data Tools</h3>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Milvus</span>
-                                <span class="skill-percent">90%</span>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">IBM Watsonx</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                    <span class="skill-percent">95%</span>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">Milvus</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Streamlit</span>
-                                <span class="skill-percent">88%</span>
+                            <div class="skill-item">
+                                <span class="skill-name">Streamlit</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                    <span class="skill-percent">88%</span>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Data Pipelines</span>
-                                <span class="skill-percent">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">Data Pipelines</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Cloud & DevOps Card -->
-                <div class="skill-card">
-                    <i class="fas fa-cloud skill-icon"></i>
-                    <h3 class="skill-category">Cloud & DevOps</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Docker</span>
-                                <span class="skill-percent">82%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="82"></div>
-                            </div>
+                    <!-- Cloud & DevOps Card -->
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fas fa-cloud"></i>
+                            <h3>Cloud & DevOps</h3>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Git</span>
-                                <span class="skill-percent">90%</span>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Docker</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 82%"></div>
+                                    <span class="skill-percent">82%</span>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">Git</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>AWS</span>
-                                <span class="skill-percent">75%</span>
+                            <div class="skill-item">
+                                <span class="skill-name">AWS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                    <span class="skill-percent">75%</span>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>CI/CD</span>
-                                <span class="skill-percent">78%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="78"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">CI/CD</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 78%"></div>
+                                    <span class="skill-percent">78%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -457,159 +409,214 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Work Section -->
+    <section id="work" class="work">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured <span class="text-primary">Projects</span></h2>
-                <div class="title-underline"></div>
-            </div>
-            
-            <div class="projects-grid">
-                <!-- Project 1: AI Meeting Whisperer -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">🧠 AI Meeting Whisperer</h3>
-                        <p class="project-description">
-                            IBM Granite-powered meeting summarizer that automatically extracts key insights, action items, 
-                            and decisions from meeting transcripts using advanced NLP and summarization techniques.
-                        </p>
-                    </div>
-                    <div class="project-footer">
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">IBM Granite</span>
-                            <span class="tag">Streamlit</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">Watsonx</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/UTarsh" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://ujayjumpman.github.io/Utkarsh-Jha/" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Real-Time Whiteboard -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">🖌️ Real-Time Collaborative Whiteboard</h3>
-                        <p class="project-description">
-                            Interactive collaborative whiteboard with real-time socket updates, Undo/Redo functionality, 
-                            and multi-user support using Node.js, Socket.io & Canvas API.
-                        </p>
-                    </div>
-                    <div class="project-footer">
-                        <div class="project-tags">
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Express.js</span>
-                            <span class="tag">Socket.io</span>
-                            <span class="tag">Canvas API</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/UTarsh" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://ujayjumpman.github.io/Utkarsh-Jha/" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: Movie Recommender System -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">🎬 Movie Recommender System</h3>
-                        <p class="project-description">
-                            Content-based movie recommendation engine using TMDB API and cosine similarity. 
-                            Provides personalized movie suggestions based on user preferences and viewing history.
-                        </p>
-                    </div>
-                    <div class="project-footer">
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Scikit-learn</span>
-                            <span class="tag">TMDB API</span>
-                            <span class="tag">Streamlit</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/UTarsh" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://ujayjumpman.github.io/Utkarsh-Jha/" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Let's <span class="text-primary">Collaborate</span></h2>
-                <div class="title-underline"></div>
+                <span class="section-label">What I Do</span>
+                <h2 class="section-title">Professional Work</h2>
                 <p class="section-subtitle">
-                    Interested in collaborating on AI/ML projects or discussing innovative data solutions? Let's connect!
+                    Building intelligent systems and automating the future
                 </p>
             </div>
             
-            <div class="contact-content">
-                <!-- Contact Form -->
-                <div class="contact-form-wrapper">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="6" required placeholder="Your message..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                    </form>
+            <div class="work-content">
+                <div class="work-card current-role">
+                    <div class="work-badge">Currently Working As</div>
+                    <h3 class="work-title">Lead Engineer (Data & AI)</h3>
+                    <div class="work-company">
+                        <i class="fas fa-building"></i> Gadiel Technologies
+                    </div>
+                    <div class="work-period">
+                        <i class="fas fa-calendar"></i> Jan 2025 - Present
+                    </div>
+                    <p class="work-description">
+                        Implementing IBM's Data and AI products at The WAVE Group. Specializing in Watsonx integration, 
+                        MLOps best practices, and building intelligent automation systems that transform raw data into 
+                        actionable insights.
+                    </p>
+                    <div class="work-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">IBM Watsonx</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">MLOps</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
                 </div>
 
-                <!-- Social Links -->
-                <div class="contact-info">
-                    <div class="social-card">
-                        <h3 class="social-title">Connect With Me</h3>
-                        <div class="social-links">
-                            <a href="https://github.com/UTarsh" target="_blank" class="social-link">
-                                <i class="fab fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/utkarsh-jha-66093822b/" target="_blank" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                            <a href="mailto:utkarsh@example.com" class="social-link">
-                                <i class="fas fa-envelope"></i>
-                                <span>Email</span>
-                            </a>
-                        </div>
-                        <div class="contact-text">
-                            <p>
-                                Open to freelance opportunities, collaborations, and exciting AI/ML projects. 
-                                Let's build something amazing together and turn data into actionable insights!
-                            </p>
+                <div class="work-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><i class="fas fa-robot"></i></div>
+                        <div class="highlight-content">
+                            <h4>AI Agent Development</h4>
+                            <p>Building intelligent conversational agents and automation systems</p>
                         </div>
                     </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><i class="fas fa-database"></i></div>
+                        <div class="highlight-content">
+                            <h4>Data Pipelines</h4>
+                            <p>Architecting scalable data infrastructure and ETL processes</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><i class="fas fa-brain"></i></div>
+                        <div class="highlight-content">
+                            <h4>Workflow Automation</h4>
+                            <p>Implementing NLP, OCR, and ASR solutions for enterprise workflows</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-cta">
+                    <a href="resume.pdf" download class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="https://www.linkedin.com/in/utkarsh-jha-66093822b/" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-linkedin"></i> View LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Passions Section -->
+    <section id="passions" class="passions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What Drives Me</span>
+                <h2 class="section-title">My Passions</h2>
+                <p class="section-subtitle">
+                    Beyond the code, the films, the words, and fitness that shape who I am
+                </p>
+            </div>
+            
+            <div class="passions-grid">
+                <!-- Code & Tech Card -->
+                <div class="passion-card tech-card">
+                    <div class="passion-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="passion-title">Code & Tech</h3>
+                    <p class="passion-description">
+                        From building AI agents to architecting data pipelines, I find beauty in elegant solutions 
+                        to complex problems. Technology is my canvas, and code is how I create.
+                    </p>
+                    <div class="passion-links">
+                        <a href="https://github.com/UTarsh" target="_blank" class="passion-link">
+                            <i class="fab fa-github"></i> View GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cinema Card -->
+                <div class="passion-card cinema-card">
+                    <div class="passion-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="passion-title">Cinema</h3>
+                    <p class="passion-description">
+                        Cinema is where I find stories that transcend time and space. From Tarkovsky to Tarantino, 
+                        each frame teaches me something new about life, art, and human nature.
+                    </p>
+                    <div class="passion-stats">
+                        <div class="stat">
+                            <span class="stat-num">1000+</span>
+                            <span class="stat-label">Films Logged</span>
+                        </div>
+                    </div>
+                    <div class="passion-links">
+                        <a href="https://boxd.it/6IfbL" target="_blank" class="passion-link">
+                            <i class="fas fa-film"></i> Letterboxd Profile
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Literature Card -->
+                <div class="passion-card literature-card">
+                    <div class="passion-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="passion-title">Literature & Philosophy</h3>
+                    <p class="passion-description">
+                        Words have power. Whether it's Camus exploring absurdism or Rilke's poetic wisdom, 
+                        I find solace in verses that capture the ineffable beauty of existence.
+                    </p>
+                    <div class="passion-stats">
+                        <div class="stat">
+                            <span class="stat-num">500+</span>
+                            <span class="stat-label">Books Read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fitness Card -->
+                <div class="passion-card fitness-card">
+                    <div class="passion-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 class="passion-title">Fitness & Sports</h3>
+                    <p class="passion-description">
+                        The discipline of the gym and the strategy of basketball keep me grounded. 
+                        Physical challenges teach me resilience, focus, and the value of consistent effort.
+                    </p>
+                    <div class="passion-images">
+                        <div class="passion-img-grid">
+                            <img src="gym.jpeg" alt="Gym" class="passion-img">
+                            <img src="bball.jpeg" alt="Basketball" class="passion-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="connect">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Let's Talk</span>
+                <h2 class="section-title">Connect With Me</h2>
+                <p class="section-subtitle">
+                    Whether it's about technology, cinema, philosophy, or just a good conversation over coffee
+                </p>
+            </div>
+            
+            <div class="connect-content">
+                <div class="connect-grid">
+                    <a href="mailto:utkkumar11@gmail.com" class="connect-card email-card">
+                        <div class="connect-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Me</h3>
+                        <p>utkkumar11@gmail.com</p>
+                        <span class="connect-arrow">→</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/utkarsh-jha-66093822b/" target="_blank" class="connect-card linkedin-card">
+                        <div class="connect-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Professional Network</p>
+                        <span class="connect-arrow">→</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/ujayjumpman/" target="_blank" class="connect-card instagram-card">
+                        <div class="connect-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3>Instagram</h3>
+                        <p>Life & Moments</p>
+                        <span class="connect-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="connect-quote">
+                    <blockquote>
+                        <p>"The best conversations happen over ideas, with curious minds and open hearts."</p>
+                    </blockquote>
                 </div>
             </div>
         </div>
@@ -619,19 +626,33 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">
-                    © 2025 Utkarsh Jha
-                </p>
-                <div class="footer-social">
-                    <a href="https://github.com/UTarsh" target="_blank" class="footer-social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/utkarsh-jha-66093822b/" target="_blank" class="footer-social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:utkkumar11@gmail.com.com" class="footer-social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                <div class="footer-left">
+                    <div class="footer-logo">Utkarsh Jha</div>
+                    <p class="footer-tagline">man with a vision</p>
+                </div>
+                <div class="footer-center">
+                    <p class="footer-text">
+                        © 2025 ujayjumpman <span class="heart">♥</span>
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-social">
+                        <a href="https://boxd.it/6IfbL" target="_blank" title="Letterboxd">
+                            <i class="fas fa-film"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ujayjumpman/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/utkarsh-jha-66093822b/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://music.apple.com/profile/ujayjumpman" target="_blank" title="Music">
+                            <i class="fas fa-music"></i>
+                        </a>
+                        <a href="https://github.com/UTarsh" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -640,7 +661,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
