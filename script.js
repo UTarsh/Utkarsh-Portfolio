@@ -1,44 +1,84 @@
 // ============================================
+// Contact Form Toggle Function
+// ============================================
+function toggleContactForm() {
+    const modal = document.getElementById('contactFormModal');
+    modal.classList.toggle('active');
+    
+    if (modal.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+}
+
+// Scroll to Email Card and open form
+function scrollToEmailCard() {
+    document.getElementById('connect').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => {
+        toggleContactForm();
+    }, 800);
+}
+
+// Close form when clicking outside
+document.addEventListener('click', (e) => {
+    const modal = document.getElementById('contactFormModal');
+    const formWrapper = document.querySelector('.contact-form-wrapper');
+    
+    if (modal && modal.classList.contains('active') && 
+        e.target === modal && !formWrapper.contains(e.target)) {
+        toggleContactForm();
+    }
+});
+
+// ============================================
 // EmailJS Contact Form Handler
 // ============================================
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
     
-    const submitBtn = document.getElementById('submitBtn');
-    const formStatus = document.getElementById('formStatus');
-    
-    // Disable button and show loading
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    formStatus.textContent = '';
-    formStatus.className = 'form-status';
-    
-    // Send email using EmailJS
-    emailjs.sendForm('service_53t97zq', 'service_53t97zq', this)
-        .then(function() {
-            formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
-            formStatus.className = 'form-status success';
-            document.getElementById('contactForm').reset();
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            // Re-enable button
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            const submitBtn = document.getElementById('submitBtn');
+            const formStatus = document.getElementById('formStatus');
             
-            // Clear status after 5 seconds
-            setTimeout(() => {
-                formStatus.textContent = '';
-                formStatus.className = 'form-status';
-            }, 5000);
-        }, function(error) {
-            formStatus.textContent = '✗ Failed to send message. Please try again or email me directly.';
-            formStatus.className = 'form-status error';
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            formStatus.textContent = '';
+            formStatus.className = 'form-status';
             
-            // Re-enable button
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-            
-            console.error('EmailJS Error:', error);
+            // Send email using EmailJS
+            emailjs.sendForm('service_53t97zq', 'service_53t97zq', this)
+                .then(function() {
+                    formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+                    formStatus.className = 'form-status success';
+                    form.reset();
+                    
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    
+                    // Close form after 3 seconds
+                    setTimeout(() => {
+                        toggleContactForm();
+                        formStatus.textContent = '';
+                        formStatus.className = 'form-status';
+                    }, 3000);
+                }, function(error) {
+                    formStatus.textContent = '✗ Failed to send message. Please try again or email me directly.';
+                    formStatus.className = 'form-status error';
+                    
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    
+                    console.error('EmailJS Error:', error);
+                });
         });
+    }
 });
 
 // ============================================
@@ -70,30 +110,25 @@ const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
 if (hamburger && navMenu) {
-    // Toggle menu on hamburger click
     hamburger.addEventListener('click', (e) => {
         e.stopPropagation();
         navMenu.classList.toggle('active');
         hamburger.classList.toggle('active');
         
-        // Animate hamburger
         const spans = hamburger.querySelectorAll('span');
         if (navMenu.classList.contains('active')) {
             spans[0].style.transform = 'rotate(45deg) translateY(10px)';
             spans[1].style.opacity = '0';
             spans[2].style.transform = 'rotate(-45deg) translateY(-10px)';
-            // Prevent body scroll when menu is open
             document.body.style.overflow = 'hidden';
         } else {
             spans[0].style.transform = 'none';
             spans[1].style.opacity = '1';
             spans[2].style.transform = 'none';
-            // Re-enable body scroll
             document.body.style.overflow = '';
         }
     });
     
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (navMenu.classList.contains('active') && 
             !navMenu.contains(e.target) && 
@@ -103,7 +138,6 @@ if (hamburger && navMenu) {
     });
 }
 
-// Close mobile menu function
 function closeMenu() {
     if (navMenu && hamburger) {
         navMenu.classList.remove('active');
@@ -116,7 +150,6 @@ function closeMenu() {
     }
 }
 
-// Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         closeMenu();
@@ -167,7 +200,6 @@ const revealObserver = new IntersectionObserver((entries) => {
     rootMargin: '0px 0px -50px 0px'
 });
 
-// Apply reveal animation to various elements
 const revealElements = document.querySelectorAll(`
     .about-paragraph,
     .stat-item,
