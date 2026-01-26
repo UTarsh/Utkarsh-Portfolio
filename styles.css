@@ -1930,3 +1930,201 @@ html {
         display: block;
     }
 }
+
+/* Enhanced Hamburger Menu Styles */
+.hamburger {
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    padding: 5px;
+}
+
+.hamburger span {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(10px) !important;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px) !important;
+}
+
+/* Ensure nav menu is properly layered */
+@media (max-width: 768px) {
+    .nav-menu {
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        display: flex !important;
+    }
+    
+    /* Ensure links are clickable */
+    .nav-link {
+        pointer-events: auto;
+        display: block;
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+}
+
+/* ============================================
+   Contact Form Styles
+   ============================================ */
+.contact-form-wrapper {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    padding: 3rem;
+    background: var(--darker);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.form-status {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.form-status.success {
+    background: rgba(78, 205, 196, 0.1);
+    border: 1px solid rgba(78, 205, 196, 0.3);
+    color: var(--secondary);
+}
+
+.form-status.error {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    color: var(--primary);
+}
+
+/* Button already styled in main CSS */
+.contact-form .btn {
+    align-self: center;
+    min-width: 200px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        padding: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-wrapper {
+        padding: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Enhanced Hamburger Menu Styles */
+.hamburger {
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    padding: 5px;
+}
+
+.hamburger span {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(10px) !important;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px) !important;
+}
+
+/* Ensure nav menu is properly layered */
+@media (max-width: 768px) {
+    .nav-menu {
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        display: flex !important;
+    }
+    
+    /* Ensure links are clickable */
+    .nav-link {
+        pointer-events: auto;
+        display: block;
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+}
