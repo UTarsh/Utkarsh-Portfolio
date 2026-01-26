@@ -15,6 +15,14 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("p000PszeW-Pjl4DB-");
+        })();
+    </script>
+    
     <link rel="stylesheet" href="styles.css">
     <title>Utkarsh Jha</title>
 </head>
@@ -87,7 +95,7 @@
                 <a href="https://music.apple.com/profile/ujayjumpman" target="_blank" class="social-icon" title="Music">
                     <i class="fas fa-music"></i>
                 </a>
-                <a href="/cdn-cgi/l/email-protection#85f0f1eeeef0e8e4f7b4b4c5e2e8e4ece9abe6eae8" class="social-icon" title="Email">
+                <a href="#connect" class="social-icon" title="Email" onclick="scrollToSection('connect'); return false;">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -335,44 +343,7 @@
                         </div>
                     </div>
 
-                    <!-- Data Tools Card -->
-                    <div class="skill-category">
-                        <div class="skill-header">
-                            <i class="fas fa-database"></i>
-                            <h3>Data Tools</h3>
-                        </div>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <span class="skill-name">IBM Watsonx</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%"></div>
-                                    <span class="skill-percent">95%</span>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Milvus</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%"></div>
-                                    <span class="skill-percent">90%</span>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Streamlit</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 88%"></div>
-                                    <span class="skill-percent">88%</span>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Data Pipelines</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%"></div>
-                                    <span class="skill-percent">85%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    
                     <!-- Cloud & DevOps Card -->
                     <div class="skill-category">
                         <div class="skill-header">
@@ -510,8 +481,8 @@
                         to complex problems. Technology is my canvas, and code is how I create.
                     </p>
                     <div class="passion-links">
-                        <a href="https://leetcode.com/u/ujayjumpman/" target="_blank" class="passion-link">
-                            <i class="fab fa-github"></i> Leetcode
+                        <a href="https://github.com/UTarsh" target="_blank" class="passion-link">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
                     </div>
                 </div>
@@ -565,7 +536,7 @@
         </div>
     </section>
 
-    <!-- Connect Section -->
+    <!-- Connect Section WITH CONTACT FORM -->
     <section id="connect" class="connect">
         <div class="container">
             <div class="section-header">
@@ -577,6 +548,31 @@
             </div>
             
             <div class="connect-content">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="from_name" name="from_name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="reply_to" name="reply_to" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Cards -->
                 <div class="connect-grid">
                     <a href="mailto:utkkumar11@gmail.com" class="connect-card email-card">
                         <div class="connect-icon">
@@ -645,3 +641,12 @@
                         <a href="https://music.apple.com/profile/ujayjumpman" target="_blank" title="Music">
                             <i class="fas fa-music"></i>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
