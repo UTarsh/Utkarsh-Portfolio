@@ -1,10 +1,53 @@
 // ============================================
+// EmailJS Contact Form Handler
+// ============================================
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+    
+    // Disable button and show loading
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    formStatus.textContent = '';
+    formStatus.className = 'form-status';
+    
+    // Send email using EmailJS
+    emailjs.sendForm('service_53t97zq', 'service_53t97zq', this)
+        .then(function() {
+            formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+            formStatus.className = 'form-status success';
+            document.getElementById('contactForm').reset();
+            
+            // Re-enable button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            
+            // Clear status after 5 seconds
+            setTimeout(() => {
+                formStatus.textContent = '';
+                formStatus.className = 'form-status';
+            }, 5000);
+        }, function(error) {
+            formStatus.textContent = '✗ Failed to send message. Please try again or email me directly.';
+            formStatus.className = 'form-status error';
+            
+            // Re-enable button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            
+            console.error('EmailJS Error:', error);
+        });
+});
+
+// ============================================
 // Smooth Scroll Function
 // ============================================
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
@@ -21,14 +64,17 @@ window.addEventListener('scroll', () => {
 });
 
 // ============================================
-// Mobile Menu Toggle
+// Mobile Menu Toggle - FIXED
 // ============================================
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
+if (hamburger && navMenu) {
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
         navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
         
         // Animate hamburger
         const spans = hamburger.querySelectorAll('span');
@@ -36,22 +82,44 @@ if (hamburger) {
             spans[0].style.transform = 'rotate(45deg) translateY(10px)';
             spans[1].style.opacity = '0';
             spans[2].style.transform = 'rotate(-45deg) translateY(-10px)';
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = 'hidden';
         } else {
             spans[0].style.transform = 'none';
             spans[1].style.opacity = '1';
             spans[2].style.transform = 'none';
+            // Re-enable body scroll
+            document.body.style.overflow = '';
         }
     });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active') && 
+            !navMenu.contains(e.target) && 
+            !hamburger.contains(e.target)) {
+            closeMenu();
+        }
+    });
+}
+
+// Close mobile menu function
+function closeMenu() {
+    if (navMenu && hamburger) {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        const spans = hamburger.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+        document.body.style.overflow = '';
+    }
 }
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        const spans = hamburger.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
+        closeMenu();
     });
 });
 
@@ -106,7 +174,9 @@ const revealElements = document.querySelectorAll(`
     .passion-card,
     .work-card,
     .highlight-item,
-    .connect-card
+    .connect-card,
+    .edu-card,
+    .skill-category
 `);
 
 revealElements.forEach(element => {
@@ -147,7 +217,6 @@ const passionCards = document.querySelectorAll('.passion-card');
 
 passionCards.forEach(card => {
     card.addEventListener('click', () => {
-        // Add a subtle pulse animation on click
         card.style.transform = 'scale(0.98)';
         setTimeout(() => {
             card.style.transform = 'scale(1)';
@@ -178,7 +247,7 @@ window.addEventListener('scroll', () => {
 // ============================================
 let cursorTrailEnabled = true;
 let lastTrailTime = 0;
-const trailInterval = 50; // milliseconds between trail dots
+const trailInterval = 50;
 
 document.addEventListener('mousemove', (e) => {
     if (!cursorTrailEnabled) return;
@@ -207,39 +276,9 @@ document.addEventListener('mousemove', (e) => {
     setTimeout(() => trail.remove(), 800);
 });
 
-// Disable cursor trail on mobile
 if (window.innerWidth < 768) {
     cursorTrailEnabled = false;
 }
-
-// ============================================
-// Typing Effect for Tagline
-// ============================================
-function typeWriter(element, text, speed = 50) {
-    let i = 0;
-    element.textContent = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
-
-// Optional: Add typing effect to hero description
-window.addEventListener('load', () => {
-    const heroDescription = document.querySelector('.hero-description');
-    if (heroDescription) {
-        const text = heroDescription.textContent;
-        setTimeout(() => {
-            typeWriter(heroDescription, text, 15);
-        }, 1000);
-    }
-});
 
 // ============================================
 // Social Icons Hover Effect
@@ -287,7 +326,7 @@ connectCards.forEach(card => {
 // ============================================
 function animateCounter(element, target, duration = 2000) {
     const start = 0;
-    const increment = target / (duration / 16); // 60fps
+    const increment = target / (duration / 16);
     let current = start;
     
     const timer = setInterval(() => {
@@ -366,67 +405,6 @@ style.textContent = `
 document.head.appendChild(style);
 
 // ============================================
-// Lazy Load Images (when you add real photos)
-// ============================================
-const lazyImages = document.querySelectorAll('img[data-src]');
-
-const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-            imageObserver.unobserve(img);
-        }
-    });
-});
-
-lazyImages.forEach(img => imageObserver.observe(img));
-
-// ============================================
-// Smooth Page Load
-// ============================================
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
-// ============================================
-// Easter Egg: Konami Code
-// ============================================
-let konamiCode = [];
-const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-
-document.addEventListener('keydown', (e) => {
-    konamiCode.push(e.key);
-    konamiCode = konamiCode.slice(-konamiSequence.length);
-    
-    if (konamiCode.join(',') === konamiSequence.join(',')) {
-        // Easter egg activated!
-        document.body.style.animation = 'rainbow 2s infinite';
-        
-        const easterEggStyle = document.createElement('style');
-        easterEggStyle.textContent = `
-            @keyframes rainbow {
-                0% { filter: hue-rotate(0deg); }
-                100% { filter: hue-rotate(360deg); }
-            }
-        `;
-        document.head.appendChild(easterEggStyle);
-        
-        setTimeout(() => {
-            document.body.style.animation = '';
-        }, 10000);
-        
-        console.log('🎉 Easter egg activated! Enjoy the rainbow!');
-    }
-});
-
-// ============================================
 // Console Message
 // ============================================
 console.log(`
@@ -434,22 +412,9 @@ console.log(`
 │  Portfolio loaded successfully! 🚀   │
 │                                       │
 │  Built with ♥ by Utkarsh Kumar Jha  │
-│  Engineer • Cinephile • Athlete      │
+│  Engineer • Cinephile • Explorer     │
 └─────────────────────────────────────┘
 `, 'color: #FF6B6B; font-family: monospace; font-size: 12px; font-weight: bold;');
 
 console.log('%cInterested in the code? Check out my GitHub!', 'color: #4ECDC4; font-size: 14px;');
 console.log('%chttps://github.com/UTarsh', 'color: #FFE66D; font-size: 12px;');
-
-// ============================================
-// Performance Monitoring
-// ============================================
-if (window.performance) {
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            const perfData = window.performance.timing;
-            const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-            console.log(`%c⚡ Page loaded in ${pageLoadTime}ms`, 'color: #4ECDC4; font-weight: bold;');
-        }, 0);
-    });
-}
