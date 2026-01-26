@@ -30,7 +30,7 @@
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">ujayjumpman<span class="logo-dot">.</span>online</div>
+            <div class="logo">Welcome <span class="logo-dot">🌍</span></div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -95,7 +95,7 @@
                 <a href="https://music.apple.com/profile/ujayjumpman" target="_blank" class="social-icon" title="Music">
                     <i class="fas fa-music"></i>
                 </a>
-                <a href="#connect" class="social-icon" title="Email" onclick="scrollToSection('connect'); return false;">
+                <a href="#connect" class="social-icon" title="Email" onclick="scrollToEmailCard(); return false;">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -343,7 +343,44 @@
                         </div>
                     </div>
 
-                    
+                    <!-- Data Tools Card -->
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i class="fas fa-database"></i>
+                            <h3>Data Tools</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">IBM Watsonx</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Milvus</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Streamlit</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Data Pipelines</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Cloud & DevOps Card -->
                     <div class="skill-category">
                         <div class="skill-header">
@@ -536,7 +573,7 @@
         </div>
     </section>
 
-    <!-- Connect Section WITH CONTACT FORM -->
+    <!-- Connect Section WITH ENHANCED FORM -->
     <section id="connect" class="connect">
         <div class="container">
             <div class="section-header">
@@ -548,40 +585,16 @@
             </div>
             
             <div class="connect-content">
-                <!-- Contact Form -->
-                <div class="contact-form-wrapper">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="from_name" name="from_name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="reply_to" name="reply_to" placeholder="Your Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="submitBtn">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                        <div id="formStatus" class="form-status"></div>
-                    </form>
-                </div>
-
                 <!-- Contact Cards -->
                 <div class="connect-grid">
-                    <a href="mailto:utkkumar11@gmail.com" class="connect-card email-card">
+                    <div class="connect-card email-card" id="emailCard" onclick="toggleContactForm()">
                         <div class="connect-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h3>Email Me</h3>
                         <p>utkkumar11@gmail.com</p>
                         <span class="connect-arrow">→</span>
-                    </a>
+                    </div>
 
                     <a href="https://www.linkedin.com/in/utkarsh-jha-66093822b/" target="_blank" class="connect-card linkedin-card">
                         <div class="connect-icon">
@@ -600,6 +613,54 @@
                         <p>Life & Moments</p>
                         <span class="connect-arrow">→</span>
                     </a>
+                </div>
+
+                <!-- Enhanced Contact Form (Hidden by default) -->
+                <div class="contact-form-modal" id="contactFormModal">
+                    <div class="contact-form-wrapper">
+                        <div class="form-header">
+                            <h3 class="form-title">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Me a Message
+                            </h3>
+                            <button class="close-form-btn" onclick="toggleContactForm()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="from_name">
+                                        <i class="fas fa-user"></i> Your Name
+                                    </label>
+                                    <input type="text" id="from_name" name="from_name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reply_to">
+                                        <i class="fas fa-envelope"></i> Your Email
+                                    </label>
+                                    <input type="email" id="reply_to" name="reply_to" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">
+                                    <i class="fas fa-tag"></i> Subject
+                                </label>
+                                <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">
+                                    <i class="fas fa-comment-dots"></i> Your Message
+                                </label>
+                                <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-send" id="submitBtn">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                            <div id="formStatus" class="form-status"></div>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="connect-quote">
