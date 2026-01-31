@@ -352,7 +352,7 @@ ul {
 .avatar-wrapper {
     width: 180px;
     height: 180px;
-    margin: 1.5rem auto 2.5rem;
+    margin: 2.5rem auto 2.5rem;
     position: relative;
     animation: float 6s ease-in-out infinite;
 }
@@ -2558,3 +2558,4 @@ html {
     background: var(--gradient-secondary);
 }
 /*aa  */
+
